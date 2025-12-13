@@ -3,209 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Felix | Portfolio Website</title>
+  <title>Electronics Basics</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      color: #e8f7ff;
-      background: linear-gradient(180deg, #08121a 0%, #061018 50%, #041014 100%);
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
     }
+
     header {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 10;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
     }
-    header h1 { margin: 0; font-size: 22px; }
+
     nav a {
-      margin: 0 12px;
-      color: #4da3ff;
+      color: #00eaff;
+      font-weight: bold;
       text-decoration: none;
-      font-size: 16px;
+      padding: 10px 15px;
+      border: 2px solid #00eaff;
+      border-radius: 8px;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background: #00eaff;
+      color: #000;
     }
 
     section {
-      max-width: 900px;
-      margin: 120px auto 50px auto;
-      background: rgba(0, 8, 12, 0.25);
-      padding: 30px;
-      border-radius: 12px;
-      backdrop-filter: blur(6px);
+      padding: 20px;
+      margin: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
     }
 
-    /* Buttons */
-    .btn {
-      background: #4da3ff;
-      color: #000;
-      padding: 10px 22px;
-      border-radius: 8px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0,0,0,0.7);
+      font-size: 14px;
+      margin-top: 30px;
     }
-    .btn:hover { background: #7bc0ff; }
-
-    /* Contact form */
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    /* Electronics animated background */
-    .electronics-svg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      mix-blend-mode: screen;
-    }
-    .trace {
-      stroke: rgba(0, 220, 255, 0.1);
-      stroke-width: 0.6;
-      fill: none;
-      stroke-dasharray: 6 14;
-      animation: dash-move 20s linear infinite;
-    }
-    @keyframes dash-move {
-      from { stroke-dashoffset: 0; }
-      to { stroke-dashoffset: -100; }
-    }
-
-    /* Light/Dark mode */
-    .theme-toggle {
-      cursor: pointer;
-      background: #4da3ff;
-      padding: 8px 14px;
-      border-radius: 6px;
-      color: #000;
-    }
-
-    /* Clock */
-    #clock { font-size: 22px; margin-top: 10px; }
-
   </style>
 </head>
 <body>
 
-<!-- Electronics background animation -->
-<svg class="electronics-svg" preserveAspectRatio="none" viewBox="0 0 100 100">
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <path class="trace" d="M2 15 H30 V25 H60 V10 H98" />
-    <path class="trace" d="M5 40 H22 V48 H40 V36 H70 V52 H95" />
-    <path class="trace" d="M0 75 H18 V68 H36 V80 H60 V70 H85" />
-  </g>
-</svg>
+<header>Mesa Electronics Basics</header>
 
-<header>
-  <h1>Felix's Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="#cv">CV</a>
-    <span class="theme-toggle" onclick="toggleTheme()">Toggle Theme</span>
-  </nav>
-</header>
+<!-- CLICKABLE MENU -->
+<nav>
+  <a href="#what">What is Electronics?</a>
+  <a href="#components">Components</a>
+  <a href="#ohm">Ohm's Law</a>
+  <a href="#circuit">Simple Circuit</a>
+  <a href="#safety">Safety Tips</a>
+</nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>Hello! I’m <strong>Felix Chilufya Besa</strong>, and this is my upgraded interactive portfolio website—fully enhanced with animations, navigation, live elements, and more.</p>
-  <div id="clock"></div>
+
+<section id="what">
+<h2>What is Electronics?</h2>
+<p>
+Electronics is the study and use of electrical devices that control the flow of electrons for functions such as amplification, switching, and power conversion.
+</p>
 </section>
 
-<section id="projects">
-  <h2>My Projects</h2>
-  <p>Here are some of the things I am working on:</p>
-  <ul>
-    <li>Web Development Learning Journey</li>
-    <li>Interactive UI Experiments</li>
-    <li>Electronics-Themed Designs</li>
-  </ul>
+
+<section id="components">
+<h2>Basic Electronic Components</h2>
+<ul>
+<li><strong>Resistor</strong> – Limits electrical current.</li>
+<li><strong>Capacitor</strong> – Stores electrical energy temporarily.</li>
+<li><strong>Inductor</strong> – Stores energy in a magnetic field.</li>
+<li><strong>Diode</strong> – Allows one-direction current flow.</li>
+<li><strong>Transistor</strong> – Acts as a switch/amplifier.</li>
+<li><strong>LED</strong> – Emits light when powered.</li>
+<li><strong>Breadboard</strong> – Used for building circuits without soldering.</li>
+</ul>
 </section>
 
-<section id="cv">
-  <h2>Download My CV</h2>
-  <a href="#" class="btn">Download CV</a>
+
+<section id="ohm">
+<h2>Ohm's Law</h2>
+<p>One of the most important laws in electronics:</p>
+<h3 style="text-align:center; font-size:24px;">V = I × R</h3>
+<p>
+• <strong>V</strong> = Voltage (Volts)<br>
+• <strong>I</strong> = Current (Amps)<br>
+• <strong>R</strong> = Resistance (Ohms)
+</p>
 </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="5" placeholder="Message"></textarea>
-    <button class="btn" type="submit">Send Message</button>
-  </form>
+
+<section id="circuit">
+<h2>Simple Circuit Example</h2>
+<p>A basic circuit includes a power source, resistor, and LED:</p>
+<ul>
+<li>Battery → Resistor → LED → Back to Battery</li>
+</ul>
 </section>
 
-<section>
-  <h2>Social Media</h2>
-  <a href="#" class="btn">Facebook</a>
-  <a href="#" class="btn">LinkedIn</a>
-  <a href="#" class="btn">GitHub</a>
+
+<section id="safety">
+<h2>Safety Tips</h2>
+<ul>
+<li>Never touch live wires.</li>
+<li>Use proper insulation.</li>
+<li>Avoid short circuits.</li>
+<li>Verify polarity before powering circuits.</li>
+</ul>
 </section>
 
-<!-- Music Player -->
-<section>
-  <h2>Music Player</h2>
-  <audio controls>
-    <source src="music.mp3" type="audio/mpeg" />
-  </audio>
-</section>
 
-<!-- Popup Modal -->
-<div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); color:#fff; padding:40px; text-align:center;">
-  <h3>Welcome to Felix's Website!</h3>
-  <p>This modal pops up interactively.</p>
-  <button class="btn" onclick="closeModal()">Close</button>
-</div>
-
-<script>
-function toggleTheme() {
-  document.body.classList.toggle('light');
-  if (document.body.classList.contains('light')) {
-    document.body.style.background = '#f4f4f4';
-    document.body.style.color = '#000';
-  } else {
-    document.body.style.background = 'linear-gradient(180deg, #08121a, #061018, #041014)';
-    document.body.style.color = '#e8f7ff';
-  }
-}
-
-function updateClock() {
-  const now = new Date();
-  document.getElementById('clock').textContent = now.toLocaleTimeString();
-}
-setInterval(updateClock, 1000);
-updateClock();
-
-window.onload = () => {
-  document.getElementById('modal').style.display = 'block';
-};
-function closeModal() {
-  document.getElementById('modal').style.display = 'none';
-}
-</script>
-
-<footer style="text-align:center; padding:20px; background:#000; color:#fff; margin-top:40px;">
-  <p>© 2025 Felix Chilufya Besa | All Rights Reserved</p>
-</footer>
+<div class="footer">© 2025 Electronics Basics | All Rights Reserved</div>
 
 </body>
 </html>
